@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "720111806511",
+    "firebase_url": "https://careermart-1ca3c.firebaseio.com",
+    "project_id": "careermart-1ca3c",
+    "storage_bucket": "careermart-1ca3c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:720111806511:android:cbe0343df079ac49",
+        "android_client_info": {
+          "package_name": "com.dsce.dbms.careermart"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "720111806511-879gd4r14kftptaclkkcssq5n1t9vpgh.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dsce.dbms.careermart",
+            "certificate_hash": "174e23af903d0120d9a68b0c41e338d87ca4fa39"
+          }
+        },
+        {
+          "client_id": "720111806511-qdo460cac5e31g5o46ab8opm0pcjfps8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dsce.dbms.careermart",
+            "certificate_hash": "7bfd8d9813288d80272fabdf4aadd962f3f4f556"
+          }
+        },
+        {
+          "client_id": "720111806511-d01kd6lesmf5qskf25krqcgvget1va8v.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3Ox1swsTU4xQ4qFi3ThpYUAN85ITknAU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "720111806511-d01kd6lesmf5qskf25krqcgvget1va8v.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
