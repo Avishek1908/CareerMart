@@ -24,6 +24,11 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mAuth = FirebaseAuth.getInstance();
 
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+        }
+
 
         Button button= (Button) findViewById(R.id.button);
 
@@ -40,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
                                     // Sign in success, update UI with the signed-in user's information
-                                    Intent i = new Intent(LoginActivity.this, Main2Activity.class);
+                                    Intent i = new Intent(LoginActivity.this, HomeActivity.class);
                                     startActivity(i);
 
                                     FirebaseUser user = mAuth.getCurrentUser();
