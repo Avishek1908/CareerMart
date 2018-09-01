@@ -26,6 +26,7 @@
         android:layout_weight="3"
         android:layout_height="wrap_content"
         android:hint="Search for courses"
+        android:id="@+id/etsearch"
         android:textSize="20sp"/>
 
 
@@ -37,11 +38,12 @@
         android:scaleType="centerInside"/>
 </LinearLayout>
 
+
     <android.support.v7.widget.RecyclerView
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/recyclerview">
+        android:layout_marginTop="20dp"
+        android:id="@+id/recycleview">
 
     </android.support.v7.widget.RecyclerView>
 
