@@ -1,22 +1,17 @@
 package com.dsce.dbms.careermart;
 
-import android.support.annotation.NonNull;
-import android.support.design.widget.BottomNavigationView;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.MenuItem;
 
-import com.dsce.dbms.careermart.BottomNavigationFragments.CartFragment;
-import com.dsce.dbms.careermart.BottomNavigationFragments.GiftsFragment;
-import com.dsce.dbms.careermart.BottomNavigationFragments.ProfileFragment;
-import com.dsce.dbms.careermart.BottomNavigationFragments.StoreFragment;
+import com.dsce.dbms.careermart.BottomNavigationFragments.HomeFragment;
+import com.dsce.dbms.careermart.BottomNavigationFragments.UserFragment;
+import com.dsce.dbms.careermart.BottomNavigationFragments.SearchFragment;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -75,13 +70,13 @@ class HomeScreenAdapter extends FragmentPagerAdapter {
     public Fragment getItem(int position) {
         switch(position){
             case 0:
-                CartFragment news = new CartFragment();
-                return  news;
+                HomeFragment home = new HomeFragment();
+                return  home;
             case 1:
-                StoreFragment col = new StoreFragment();
-                return col;
+                SearchFragment search = new SearchFragment();
+                return search;
             case 2:
-                GiftsFragment user = new GiftsFragment();
+                UserFragment user = new UserFragment();
                 return user;
             default: return null;
         }

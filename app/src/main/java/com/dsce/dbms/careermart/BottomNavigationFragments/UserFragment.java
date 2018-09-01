@@ -9,22 +9,18 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.dsce.dbms.careermart.R;
-public class StoreFragment extends Fragment {
 
-
-
+public class UserFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_store, container, false);
+        return inflater.inflate(R.layout.fragment_gifts, container, false);
     }
-
 
 }
