@@ -1,6 +1,7 @@
 package com.dsce.dbms.careermart.BottomNavigationFragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -19,6 +20,9 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.dsce.dbms.careermart.ClickInterface;
+import com.dsce.dbms.careermart.Courseinfo;
+import com.dsce.dbms.careermart.HomeActivity;
+import com.dsce.dbms.careermart.LoginActivity;
 import com.dsce.dbms.careermart.R;
 import com.dsce.dbms.careermart.SearchAdatpter;
 import com.google.firebase.auth.FirebaseAuth;
@@ -133,6 +137,10 @@ public class SearchFragment extends Fragment {
             @Override
             public void onClick(View view, int position) {
                 Toast.makeText(SearchFragment.this.getContext(), fullNameList.get(position), Toast.LENGTH_SHORT).show();
+                Intent i = new Intent(getActivity(), Courseinfo.class);
+                i.putExtra("STRING_I_NEED", fullNameList.get(position));
+                startActivity(i);
+
             }
         };
         searchadap = new SearchAdatpter(getActivity(),fullNameList, listener);

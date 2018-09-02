@@ -18,6 +18,7 @@
         </activity>
         <activity android:name=".Main2Activity" />
         <activity android:name=".HomeActivity" />
+        <activity android:name=".Courseinfo"></activity>
     </application>
 
 </manifest>
