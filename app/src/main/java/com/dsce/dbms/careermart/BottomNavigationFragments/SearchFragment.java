@@ -1,5 +1,6 @@
 package com.dsce.dbms.careermart.BottomNavigationFragments;
 
+import android.app.ActionBar;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -42,8 +43,9 @@ public class SearchFragment extends Fragment {
     ImageButton searchbtn;
     DatabaseReference dref;
     FirebaseUser fuser;
-    ArrayList<String> fullNameList;
+    ArrayList<String> fullNameList, keysList;
     SearchAdatpter searchadap;
+
 
 
     public SearchFragment()
@@ -57,6 +59,8 @@ public class SearchFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_store, container, false);
 
+
+
         searchField = (EditText)view.findViewById(R.id.etsearch);
         recView = (RecyclerView)view.findViewById(R.id.recycleview);
         dref = FirebaseDatabase.getInstance().getReference();
@@ -67,6 +71,9 @@ public class SearchFragment extends Fragment {
         recView.addItemDecoration(new DividerItemDecoration(getContext(), LinearLayoutManager.VERTICAL));
 
         fullNameList = new ArrayList<>();
+        keysList = new ArrayList<>();
+
+
 
         searchField.addTextChangedListener(new TextWatcher() {
             @Override
@@ -88,7 +95,9 @@ public class SearchFragment extends Fragment {
                     }
                     else
                     {
-                        fullNameList.clear();ClickInterface listener = new ClickInterface() {
+                        fullNameList.clear();
+                        keysList.clear();
+                        ClickInterface listener = new ClickInterface() {
                         @Override
                         public void onClick(View view, int position) {
                             Toast.makeText(SearchFragment.this.getContext(), fullNameList.get(position), Toast.LENGTH_SHORT).show();
@@ -108,18 +117,22 @@ public class SearchFragment extends Fragment {
     void setAdapter(final String string)
     {
         fullNameList.clear();
+        keysList.clear();
         recView.removeAllViews();
         dref.child("users").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 fullNameList.clear();
+                keysList.clear();
                 recView.removeAllViews();
                 for(DataSnapshot snap: dataSnapshot.getChildren())
                 {
+
                     String fullName = snap.child("fullname").getValue(String.class);
-                    if(fullName.toLowerCase().contains(string))
+                    if(fullName.toLowerCase().contains(string.toLowerCase()))
                     {
                         fullNameList.add(fullName);
+                        keysList.add(snap.getKey());
 
                         Log.i("Activity",fullName);
                     }
@@ -138,7 +151,7 @@ public class SearchFragment extends Fragment {
             public void onClick(View view, int position) {
                 Toast.makeText(SearchFragment.this.getContext(), fullNameList.get(position), Toast.LENGTH_SHORT).show();
                 Intent i = new Intent(getActivity(), Courseinfo.class);
-                i.putExtra("STRING_I_NEED", fullNameList.get(position));
+                i.putExtra("STRING_I_NEED", keysList.get(position));
                 startActivity(i);
 
             }

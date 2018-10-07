@@ -18,10 +18,7 @@ public class Courseinfo extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_courseinfo);
         Bundle extras = getIntent().getExtras();
-       String newString= extras.getString("STRING_I_NEED");
-
-
-
+        String newString= extras.getString("STRING_I_NEED");
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference myRef = database.getReference("users/"+newString);
 

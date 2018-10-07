@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.dsce.dbms.careermart.HomeActivity;
 import com.dsce.dbms.careermart.LoginActivity;
 import com.dsce.dbms.careermart.R;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -30,6 +31,8 @@ public class UserFragment extends Fragment {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_gifts, container, false);
         mAuth = FirebaseAuth.getInstance();
+
+
 
         Button button= (Button) view.findViewById(R.id.sign_out);
 

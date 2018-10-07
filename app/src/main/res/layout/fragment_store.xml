@@ -6,28 +6,11 @@
     android:orientation="vertical"
     tools:context=".BottomNavigationFragments.SearchFragment">
 
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Course Search"
-        android:textColor="#000"
-        android:textSize="22sp"
-        />
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:layout_marginTop="30dp">
-
-    <EditText
-        android:layout_width="0dp"
-        android:layout_weight="3"
-        android:layout_height="wrap_content"
-        android:hint="Search for courses"
-        android:id="@+id/etsearch"
-        android:textSize="20sp"/>
 
 
     <ImageButton
@@ -35,7 +18,21 @@
         android:layout_weight="1"
         android:layout_height="50dp"
         android:src="@drawable/searchfirebase"
-        android:scaleType="centerInside"/>
+        android:scaleType="centerInside"
+        android:backgroundTint="#fff"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="wrap_content"
+        android:hint="Search for courses"
+        android:id="@+id/etsearch"
+        android:textSize="20sp"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimaryDark"
+        />
+
+
 </LinearLayout>
 
 
