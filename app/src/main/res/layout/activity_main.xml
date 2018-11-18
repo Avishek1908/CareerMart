@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/eduback"
+    android:orientation="vertical"
     tools:context=".LoginActivity">
 
 
@@ -12,73 +13,63 @@
         android:id="@+id/imageView"
         android:layout_width="wrap_content"
         android:layout_height="192dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/logo" />
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/mainlogo" />
+
+    <android.support.v7.widget.CardView
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#fff"
+        app:cardElevation="20dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="20dp">
 
     <EditText
         android:id="@+id/Username"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_centerInParent="true"
-        android:background="#11000000"
+        android:background="?android:attr/colorEdgeEffect"
         android:drawableLeft="@drawable/ic_action_user1"
-        android:ems="10"
         android:hint="   UserName"
         android:inputType="textPersonName"
-        android:textSize="16dp" />
+        android:textSize="16dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
 
     <EditText
         android:id="@+id/Password"
         android:layout_width="300dp"
         android:layout_height="40dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="250dp"
-        android:background="#11000000"
+        android:background="?android:attr/colorEdgeEffect"
         android:drawableLeft="@drawable/ic_action_password"
         android:ems="10"
         android:hint=" Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"/>
 
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true">
+        <Button
+            android:id="@+id/button"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:backgroundTint="?android:attr/colorEdgeEffect"
+            android:text="Login"
+            android:textSize="19dp"
+            android:textColor="#d3d3d3"
+            android:layout_gravity="center"
+            />
+
+    </LinearLayout>
+    </android.support.v7.widget.CardView>
 
 
 
-    </RelativeLayout>
-
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="91dp"
-        android:layout_marginStart="132dp"
-        android:text="Register Here"
-        android:textSize="20dp" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="300dp"
-        android:layout_height="50dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="162dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
-        android:text="Login"
-        android:textSize="19dp"
-        android:textColor="#d3d3d3"
-        android:layout_centerInParent="true"
-
-
-        android:elevation="10dp"
-        />
-</RelativeLayout>
+</LinearLayout>

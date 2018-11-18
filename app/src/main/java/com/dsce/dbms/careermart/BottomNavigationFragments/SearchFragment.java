@@ -119,7 +119,7 @@ public class SearchFragment extends Fragment {
         fullNameList.clear();
         keysList.clear();
         recView.removeAllViews();
-        dref.child("users").addValueEventListener(new ValueEventListener() {
+        dref.child("Courses").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 fullNameList.clear();
