@@ -15,6 +15,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -45,6 +46,10 @@ public class SearchFragment extends Fragment {
     FirebaseUser fuser;
     ArrayList<String> fullNameList, keysList;
     SearchAdatpter searchadap;
+    CheckBox checkBoxa,checkBoxb,checkBoxc;
+
+
+
 
 
 
@@ -72,6 +77,51 @@ public class SearchFragment extends Fragment {
 
         fullNameList = new ArrayList<>();
         keysList = new ArrayList<>();
+        checkBoxa=(CheckBox) view.findViewById(R.id.checkBoxa);
+        checkBoxb=(CheckBox) view.findViewById((R.id.checkBoxb));
+        checkBoxc=(CheckBox) view.findViewById(R.id.checkBoxc);
+
+        checkBoxa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(checkBoxa.isChecked()){
+                    String getCBData=checkBoxa.getText().toString();
+                    Toast.makeText(getActivity(),"Sorted by courses"+getCBData,Toast.LENGTH_SHORT).show();
+                    checkBoxb.setChecked(false);
+                    checkBoxc.setChecked(false);
+                }
+
+            }
+
+                                     });
+        checkBoxb.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(checkBoxb.isChecked()){
+                    String getCBData2=checkBoxb.getText().toString();
+                    Toast.makeText(getActivity(),"Sorted by faculty"+getCBData2,Toast.LENGTH_SHORT).show();
+                    checkBoxa.setChecked(false);
+                    checkBoxc.setChecked(false);
+                }
+
+            }
+
+        });
+        checkBoxc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(checkBoxc.isChecked()){
+                    String getCBData3=checkBoxc.getText().toString();
+                    Toast.makeText(getActivity(),"Sorted by pre requisites"+getCBData3,Toast.LENGTH_SHORT).show();
+                    checkBoxa.setChecked(false);
+                    checkBoxb.setChecked(false);
+                }
+
+            }
+
+        });
+
+
 
 
 
@@ -140,6 +190,7 @@ public class SearchFragment extends Fragment {
                 }
 
             }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {

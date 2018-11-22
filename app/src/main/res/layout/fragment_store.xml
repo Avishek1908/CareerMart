@@ -6,43 +6,80 @@
     android:orientation="vertical"
     tools:context=".BottomNavigationFragments.SearchFragment">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_marginTop="30dp">
 
-
-    <ImageButton
-        android:layout_width="0dp"
-        android:layout_weight="1"
-        android:layout_height="50dp"
-        android:src="@drawable/searchfirebase"
-        android:scaleType="centerInside"
-        android:backgroundTint="#fff"/>
-
-    <EditText
-        android:layout_width="0dp"
-        android:layout_weight="5"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Search for courses"
-        android:id="@+id/etsearch"
-        android:textSize="20sp"
-        android:backgroundTint="@color/colorPrimary"
-        android:textColorHint="@color/colorPrimaryDark"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:backgroundTint="#fff"
+            android:scaleType="centerInside"
+            android:src="@drawable/searchfirebase" />
+
+        <EditText
+            android:id="@+id/etsearch"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:backgroundTint="@color/colorPrimary"
+            android:hint="Search for courses"
+            android:textColorHint="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+
+
+
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/checkBoxa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort by courses"
         />
 
+    <CheckBox
+        android:id="@+id/checkBoxb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sort by faculty" />
 
-</LinearLayout>
+    <CheckBox
+        android:id="@+id/checkBoxc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Sort by pre requisites" />
 
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="162dp"
+        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:text="Search"
+        android:textColor="#d3d3d3"
+        android:textSize="19dp"
+        android:layout_marginLeft="40dp"
+
+        />
 
     <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-        android:id="@+id/recycleview">
+        >
 
     </android.support.v7.widget.RecyclerView>
+
 
 
 

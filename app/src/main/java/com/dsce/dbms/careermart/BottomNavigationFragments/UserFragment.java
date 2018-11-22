@@ -13,6 +13,7 @@ import android.widget.Button;
 
 import com.dsce.dbms.careermart.HomeActivity;
 import com.dsce.dbms.careermart.LoginActivity;
+import com.dsce.dbms.careermart.ProfileActivity;
 import com.dsce.dbms.careermart.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -40,8 +41,21 @@ public class UserFragment extends Fragment {
 
             public void onClick(View v) {
 
+
                 mAuth.getInstance().signOut();
                 startActivity(new Intent(getActivity(), LoginActivity.class));
+            }
+        });
+
+
+        Button btn = (Button)view.findViewById(R.id.buttonX);
+
+        btn.setOnClickListener(new View.OnClickListener() {
+
+            public void onClick(View v) {
+                mAuth.getInstance().getCurrentUser();
+
+                startActivity(new Intent(getActivity(), ProfileActivity.class));
             }
         });
 

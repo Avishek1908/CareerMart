@@ -6,25 +6,34 @@
     tools:context=".BottomNavigationFragments.UserFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+
 
     <Button
         android:id="@+id/sign_out"
         android:layout_width="300dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="162dp"
-        android:backgroundTint="?android:attr/colorEdgeEffect"
-        android:text="Sign Out"
-        android:textSize="19dp"
-        android:textColor="#d3d3d3"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="58dp"
+        android:backgroundTint="?android:attr/colorEdgeEffect"
+        android:elevation="10dp"
+        android:text="Sign Out"
+        android:textColor="#d3d3d3"
 
 
-        android:elevation="10dp" />
+        android:textSize="19dp" />
+
+    <Button
+        android:id="@+id/buttonX"
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+
+        android:layout_centerInParent="true"
+        android:layout_marginStart="119dp"
+        android:layout_marginTop="220dp"
+        android:elevation="10dp"
+        android:text="Info"
+        android:textColor="#d3d3d3"
+        android:backgroundTint="?android:attr/colorEdgeEffect"/>
 
 </RelativeLayout>
